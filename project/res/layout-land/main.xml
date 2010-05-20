@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+	<RelativeLayout android:id="@+id/game"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+		<com.androidemu.drpocketsnes.input.VirtualKeypad
+				android:id="@+id/keypad"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent">
+
+			<TextView style="@style/select_start_button"
+					android:id="@+id/select"
+					android:layout_marginLeft="0px"
+					android:layout_alignParentTop="true"
+					android:text="@string/gamepad_select"/>
+
+			<TextView style="@style/select_start_button"
+					android:id="@+id/start"
+					android:layout_toRightOf="@id/select"
+					android:text="@string/gamepad_start"/>
+
+			<ImageView android:id="@+id/dpad"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:src="@drawable/keypad"/>
+					
+			<ImageView android:id="@+id/tl"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_below="@id/start"
+					android:layout_marginTop="10px"
+					android:layout_marginLeft="5px"
+					android:padding="8px"
+					android:src="@drawable/l"/>  
+					
+			<ImageView android:id="@+id/tr"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/tl"
+					android:layout_below="@id/start"
+					android:layout_marginTop="10px"
+					android:layout_marginLeft="5px"
+					android:padding="8px"
+					android:src="@drawable/r"/>  
+			       
+		    <ImageView android:id="@+id/y"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/tl"
+					android:layout_marginLeft="15px"
+					android:layout_marginTop="15px"
+					android:layout_alignParentLeft="true"
+					android:padding="8px"
+					android:src="@drawable/y"/>
+					
+			<ImageView android:id="@+id/x"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="50px"
+					android:layout_marginTop="0px"
+					android:layout_below="@id/tr"
+					android:padding="8px"
+					android:src="@drawable/x"/>    
+			        
+			<ImageView android:id="@+id/b"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/x"
+					android:layout_alignParentLeft="true"
+					android:layout_marginLeft="35px"
+					android:layout_marginTop="10px"
+					android:padding="8px"
+					android:src="@drawable/b"/>  
+					
+		    <ImageView android:id="@+id/a"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="70px"
+					android:layout_marginTop="30px"
+					android:layout_below="@id/tr"
+					android:padding="8px"
+					android:src="@drawable/a"/>  
+			        
+ 
+			        
+		</com.androidemu.drpocketsnes.input.VirtualKeypad>
+
+		<FrameLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_alignParentRight="true"
+				android:layout_toRightOf="@id/keypad">
+			<com.androidemu.EmulatorView
+					android:id="@+id/emulator"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:layout_gravity="center"/>
+		</FrameLayout>
+		
+	</RelativeLayout>
+
+	<TextView android:id="@+id/empty"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/no_rom"
+			android:textSize="20sp"
+			android:gravity="center"/>
+
+</FrameLayout>
+
