@@ -5,7 +5,7 @@ LOCAL_MODULE_TAGS := user
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
-LOCAL_PACKAGE_NAME := AndroidDrPocketSNES
+LOCAL_PACKAGE_NAME := androiddrpocketsnes
 
 LOCAL_JNI_SHARED_LIBRARIES := \
 	libsnes \

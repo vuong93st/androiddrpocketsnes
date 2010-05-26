@@ -81,19 +81,22 @@ public class GamePreferences extends PreferenceActivity
 	};
 
 	private static final int defaultKeys_qwerty[] = {
-		KeyEvent.KEYCODE_1,
-		KeyEvent.KEYCODE_A,
-		KeyEvent.KEYCODE_Q,
-		KeyEvent.KEYCODE_W,
-		0, 0, 0, 0,
-		KeyEvent.KEYCODE_DEL,
-		KeyEvent.KEYCODE_ENTER,
-		KeyEvent.KEYCODE_0,
-		KeyEvent.KEYCODE_P,
-		KeyEvent.KEYCODE_9,
 		KeyEvent.KEYCODE_O,
+		KeyEvent.KEYCODE_M,
 		KeyEvent.KEYCODE_K,
 		KeyEvent.KEYCODE_L,
+		KeyEvent.KEYCODE_I,
+		KeyEvent.KEYCODE_P,
+		KeyEvent.KEYCODE_N,
+		KeyEvent.KEYCODE_PERIOD,
+		KeyEvent.KEYCODE_DEL,
+		KeyEvent.KEYCODE_ENTER,
+		KeyEvent.KEYCODE_A,
+		KeyEvent.KEYCODE_S,
+		KeyEvent.KEYCODE_Q,
+		KeyEvent.KEYCODE_W,
+		KeyEvent.KEYCODE_X,
+		KeyEvent.KEYCODE_C,
 	};
 
 	private static final int defaultKeys_non_qwerty[] = {
