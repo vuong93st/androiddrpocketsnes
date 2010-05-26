@@ -67,11 +67,11 @@
 	<string name="gamepad_down_right">Down+Right</string>
 	<string name="gamepad_select">Select</string>
 	<string name="gamepad_start">Start</string>
-	<string name="gamepad_A"></string>
-	<string name="gamepad_B"></string>
-	<string name="gamepad_X"></string>
-	<string name="gamepad_Y"></string>
-	<string name="gamepad_TL"></string>
-	<string name="gamepad_TR"></string>
+	<string name="gamepad_A">A</string>
+	<string name="gamepad_B">B</string>
+	<string name="gamepad_X">X</string>
+	<string name="gamepad_Y">Y</string>
+	<string name="gamepad_TL">Trigger Left</string>
+	<string name="gamepad_TR">Trigger Right</string>
 
 </resources>

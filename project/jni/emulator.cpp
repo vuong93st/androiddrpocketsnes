@@ -116,6 +116,7 @@ static AudioPlayer *loadAudioPlayer(const char *libdir)
 			dlsym(handle, "createPlayer");
 	if (createPlayer == NULL) {
 		dlclose(handle);
+		LOGD("Unable to create AudioPlayer");
 		return NULL;
 	}
 	return createPlayer();
@@ -154,6 +155,7 @@ static void resumeEmulator()
 	pthread_mutex_lock(&emuStateMutex);
 	if (emuState == EMUSTATE_PAUSED) {
 		emuState = EMUSTATE_REQUEST_RUN;
+		LOGD("Resuming emulator");
 		pthread_cond_signal(&emuStateCond);
 
 		while (emuState == EMUSTATE_REQUEST_RUN)
@@ -309,6 +311,7 @@ Emulator_setRenderSurface(JNIEnv *env, jobject self,
 	pauseEmulator();
 
 	if (renderSurface != NULL) {
+		LOGE("Creating renderSurface");
 		delete[] screen16;
 		screen16 = NULL;
 		env->DeleteGlobalRef(jImage);
@@ -318,6 +321,7 @@ Emulator_setRenderSurface(JNIEnv *env, jobject self,
 	}
 
 	if (surface != NULL) {
+		LOGE("Creating surface");
 		surfaceWidth = width;
 		surfaceHeight = height;
 
