@@ -1,4 +1,9 @@
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := /path/to/AndroidDrPocketSNES/project
+include $(LOCAL_PATH)/sound/Android.mk
+LOCAL_PATH := /path/to/AndroidDrPocketSNES/project
+include $(LOCAL_PATH)/sneslib/Android.mk
+
+LOCAL_PATH:= /path/to/AndroidDrPocketSNES/project/jni
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := user
